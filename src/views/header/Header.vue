@@ -227,7 +227,7 @@ export default {
   cursor: pointer;
 }
 .logo {
-  width: 13.4vw;
+  width: 9.8vw;
   margin-right: 20px;
   & + span {
     font-size: 30px;
