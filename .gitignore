@@ -1,0 +1,11 @@
+*.iml
+.idea
+go.sum
+.DS_Store
+filscan-backend
+filscan_lotus
+fileStar*
+conf
+main.log
+fileStar*
+node_modules
