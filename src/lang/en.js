@@ -74,6 +74,10 @@ const en = {
         label: "Home",
         index: "/"
       },
+      miner: {
+        label: "Miner",
+        index: "/miner"
+      },
       tipset: {
         label: "Tipset",
         index: "tipset",
@@ -186,6 +190,11 @@ const en = {
         label: "Pledge Collateral",
         tips: "Total Fil in Pledge Collateral"
       },
+      peers: {
+        label: "Active Miners",
+        tips: "Amount of miners that has a positive storage power."
+      },
+
       number: {
         label: "Blocks In Tipset",
         tips:
@@ -230,6 +239,7 @@ const en = {
         label: [
           "Miner",
           "Peer ID",
+          "Tag",
           "Storage Power",
           "Power %",
           "Blocks Mined",

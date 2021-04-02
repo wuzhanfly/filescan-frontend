@@ -1,15 +1,25 @@
 <template>
   <div class="home-con bottom-10">
-    <div class="bottom-20">
-          <ticket-chain
-      @hash-change="handleHashChange"
-      @height-change="handleHeightChange"
-      v-if="!isMobile && atIndex"
-    />
-    </div>
+
+<!--    <div class="bottom-20">-->
+<!--          <ticket-chain-->
+<!--      @hash-change="handleHashChange"-->
+<!--      @height-change="handleHeightChange"-->
+<!--      v-if="!isMobile && atIndex"-->
+<!--    />-->
+<!--    </div >-->
+
     <div class="board-con bottom-20">
       <total-board />
+
       <total-chart />
+
+    </div>
+    <div class="board-con bottom-20">
+      <PledgeCollateral />
+    </div>
+    <div class="board-con bottom-20">
+      <proven-power />
     </div>
     <div class="block-message-table bottom-20">
       <block-table />
@@ -21,7 +31,11 @@
 
 <script>
 import * as components from "./components";
-import TicketChain from "../tipset/components/TicketChain";
+// import TicketChain from "../tipset/components/TicketChain";
+
+import TotalBoard from "@/views/home/components/TotalBoard";
+import PledgeCollateral from "@/views/home/components/PledgeCollateral"
+import ProvenPower from "@/views/stats/components/mining/ProvenPower"
 export default {
   name: "Home",
   data() {
@@ -30,8 +44,11 @@ export default {
     };
   },
   components: {
+    TotalBoard,
     ...components,
-    TicketChain
+    // TicketChain,
+    ProvenPower,
+    PledgeCollateral
   },
   methods: {
     handleHashChange(v) {

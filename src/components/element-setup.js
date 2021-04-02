@@ -19,7 +19,9 @@ import {
   Popover,
   Loading,
   RadioButton,
-  RadioGroup
+  RadioGroup,
+    Tabs,
+    TabPane,
 } from "element-ui";
 import en from "element-ui/lib/locale/lang/en";
 import locale from "element-ui/lib/locale";
@@ -43,4 +45,6 @@ Vue.component(Pagination.name, Pagination);
 Vue.component(Popover.name, Popover);
 Vue.component(RadioButton.name, RadioButton);
 Vue.component(RadioGroup.name, RadioGroup);
+Vue.component(Tabs.name,Tabs);
+Vue.component(TabPane.name,TabPane)
 Vue.use(Loading);

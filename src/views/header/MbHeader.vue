@@ -7,7 +7,7 @@
         @click="$router.go(-1)"
       ></div>
       <div class="logo" v-else>
-        <img style="width: 40.3vw;" src="@/assets/logo.png" />
+        <img style="width: 40.3vw;" src="@/assets/logo.svg" />
       </div>
 
       <div class="route-name">{{ routeName }}</div>

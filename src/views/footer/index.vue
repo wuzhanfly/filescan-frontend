@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
 
-<!--    <div class="peer" @click="goTo('map')">-->
-    <div class="peer" >
-<!--      {{ $t("footer.peer", { count: formatNumber(count) }) }}-->
+    <div class="peer" @click="goTo('map')">
+<!--    <div class="peer" >-->
+      {{ $t("footer.peer", { count: formatNumber(count) }) }}
       filecoin.pl
       漂亮浏览器是Filecoin区块链浏览器及数据服务平台。为用户提供有关Filecoin相关的各类数据、信息咨询和可视化图表等一站式的数据服务。
 

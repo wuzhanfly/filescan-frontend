@@ -18,6 +18,14 @@ const routes = [
       title: '漂亮浏览器 - Filecoin区块链浏览器'   // 标题设置
     }
   },
+  {
+    path: "/miner",
+    name: "miner",
+        component: () => import(/* webpackChunkName: "Stats" */ "../views/miner/Miner"),
+    meta: {
+      title: '挖矿排行榜 - Filecoin区块链浏览器'   // 标题设置
+    }
+  },
 
   {
     path: "/tipset",

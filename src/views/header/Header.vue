@@ -1,18 +1,18 @@
 <template>
   <div class="header-con" style="  background: #2f4f80;">
-    <el-row align="middle" type="flex">
-      <el-col :span="1" class="logo-con" @click.native="goTo('home')">
-        <img src="@/assets/logo.png" class="logo" />
-<!--        <span style="font-size: 1.9625vw;-->
-<!--    margin-left: 1.333vw;-->
-<!--    font-weight: 600;">{{ $t("header.title") }}</span>-->
+    <el-row align="middle" type="flex" justify="end">
+      <el-col :span="3" class="logo-con" @click.native="goTo('home')">
+        <img src="@/assets/logo.svg" alt="logo" class="logo" />
       </el-col>
       <el-col :span="6" class="link-con">
         <el-menu mode="horizontal" :default-active="$route.path" :router="true">
           <el-menu-item index="/">{{
             $t("header.nav.home.label")
           }}</el-menu-item>
-          <el-submenu index="tipset" >
+          <el-menu-item index="miner">{{
+              $t("header.nav.miner.label") }}
+          </el-menu-item>
+          <el-submenu index="tipset">
             <template slot="title">{{
               $t("header.nav.tipset.label")
             }}</template>
@@ -136,7 +136,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .header-con {
-  padding: 0 20px;
+  padding: 0 1.042vw;
   height: 70px;
   position: fixed;
   width: 100%;
@@ -155,13 +155,13 @@ export default {
     ul{
       background:  #2f4f80;
       li::v-deep{
-        color: var(--main-text-color)!important;
+        color: whitesmoke!important;
         &.is-active{
           font-weight: bold;
           color: var(--main-text-color)
         }
         &:hover,&:focus{
-          background: var(--board-bg-color)!important;
+          background: #2f4f80 !important;
         }
         div,div>i{
           background: #2f4f80!important;
@@ -217,7 +217,7 @@ export default {
 .search-wrap {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: left !important;
   .icon {
     margin-left: auto;
     width: 40px;

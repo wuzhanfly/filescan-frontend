@@ -51,6 +51,26 @@ export function getBlocSizeData(data) {
 }
 /*
 param:{
+  start_time timestamp
+  end_time timestamp
+}
+*/
+export function getGetFil() {
+  return fetch({
+    method: "post",
+    url: "GetFil",
+  });
+}
+
+export function getPowerIn(){
+  return fetch({
+    method: "post",
+    url: "GetPowerIn",
+  });
+}
+
+/*
+param:{
   time timestamp
 }
 */

@@ -219,7 +219,7 @@ const zh = {
       },
       minerList: {
         title: "矿工列表",
-        label: ["矿工", "Peer ID", "有效算力", "占比", "出块数", "% 出块占比"],
+        label: ["矿工", "Peer ID","标签" ,"有效算力", "占比", "出块数", "% 出块占比"],
         detail: ["矿工", "IP", "位置"],
         placeholder: "按矿工地址/PeerID搜索"
       }

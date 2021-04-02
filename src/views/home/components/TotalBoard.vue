@@ -68,6 +68,12 @@ export default {
           key: "pledge_collateral",
           class: "yellow",
           unit: "FIL"
+        },
+        {
+          labelKey: "peers",
+          key: "peers",
+          class: "yellow",
+          unit: ""
         }
       ],
       timer: null,
@@ -87,6 +93,7 @@ export default {
     async getBoardInfo() {
       try {
         const info = await getBoardInfo();
+        console.log(info.peers)
         this.loading = false;
         info.avg_message_size = parseInt(info.avg_message_size);
         this.info = this.info.map(item => {

@@ -1,7 +1,8 @@
 <template>
   <div class="in18">
-    <button @click="switchLang('en')">EN</button>
-    <button @click="switchLang('zh')">中文</button>
+    <span  @click="switchLang('en')" style= "color: #f3921b;  align-items: center;">EN</span>
+    <span>  /  </span>
+    <span @click="switchLang('zh')">中文</span>
   </div>
 </template>
 <script>
@@ -26,20 +27,6 @@ export default {
   }
 };
 </script>
-<!--<style scoped>-->
-<!--.vue-css button {-->
-<!--  width: 150px;-->
-<!--}-->
-<!--.en .vue-css button {-->
-<!--  color: steelblue;-->
-<!--}-->
-<!--.cn .vue-css button {-->
-<!--  color: #666;-->
-<!--}-->
-<!--.ja .vue-css button {-->
-<!--  color: seagreen;-->
-<!--}-->
-<!--</style>-->
 
 <style lang="scss" scoped>
 .in18{
