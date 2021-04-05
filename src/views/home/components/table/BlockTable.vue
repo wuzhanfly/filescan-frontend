@@ -171,6 +171,15 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+@media screen and (max-width: 768px) {
+  .el-link--inner {
+    font-size: 14px!important;
+  }
+}
+
+</style>
+
 <style lang="scss" scoped>
 .block-miner-table {
   display: flex;

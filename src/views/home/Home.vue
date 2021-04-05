@@ -18,13 +18,19 @@
     <div class="board-con bottom-20">
       <PledgeCollateral />
     </div>
-    <div class="board-con bottom-20">
-      <proven-power />
+<!--    <div class="board-con bottom-20">-->
+<!--      <proven-power />-->
+<!--    </div>-->
+    <div class="block-chart bottom-20">
+      <daily-power />
+      <base-gas />
     </div>
     <div class="block-message-table bottom-20">
       <block-table />
       <message-table />
+
     </div>
+
 
   </div>
 </template>
@@ -35,7 +41,9 @@ import * as components from "./components";
 
 import TotalBoard from "@/views/home/components/TotalBoard";
 import PledgeCollateral from "@/views/home/components/PledgeCollateral"
-import ProvenPower from "@/views/stats/components/mining/ProvenPower"
+// import ProvenPower from "@/vies/stats/components/mining/ProvenPower"
+import DailyPower from "@/views/home/components/chart/DailyPower"
+import BaseGas from "@/views/home/components/chart/BaseGas"
 export default {
   name: "Home",
   data() {
@@ -47,8 +55,10 @@ export default {
     TotalBoard,
     ...components,
     // TicketChain,
-    ProvenPower,
-    PledgeCollateral
+    // ProvenPower,
+    PledgeCollateral,
+    DailyPower,
+    BaseGas
   },
   methods: {
     handleHashChange(v) {
@@ -110,8 +120,13 @@ export default {
     }
     margin: 40px 0;
   }
+  .block-chart {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+  }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .block-message-table {
     display: block !important;
     & ::v-deep > div {
@@ -129,6 +144,10 @@ export default {
   }
   .board-con {
     background: transparent !important;
+  }
+  .block-chart {
+    display: inline!important;
+    height: 710px!important;
   }
 }
 </style>

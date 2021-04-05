@@ -194,6 +194,55 @@ const en = {
         label: "Active Miners",
         tips: "Amount of miners that has a positive storage power."
       },
+      PowerIn24H: {
+        label: " PowerIn 24H",
+        tips: "Amount of miners that has a positive storage power."
+      },
+
+      avgBlocksTipSet: {
+        label: "avgBlocksTipSet",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      avgGasPremium: {
+        label: "avgGasPremium",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      avg_gas_price: {
+        label: "avgGasPrice",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      avg_messages_tipset: {
+        label: "avgMessagesTipset",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      currentFil: {
+        label: "currentFil",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      flowRate: {
+        label: "flowRate",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      last_blocktime: {
+        label: "lastBlockTime",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      newlyFilIn24h: {
+        label: "newlyFilIn24h",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      newlyPrice: {
+        label: "newlyPrice",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      totalBurnUp: {
+        label: "totalBurnUp",
+        tips: "Amount of miners that has a positive storage power."
+      },
+      totalFil: {
+        label: "totalFil",
+        tips: "Amount of miners that has a positive storage power."
+      },
 
       number: {
         label: "Blocks In Tipset",

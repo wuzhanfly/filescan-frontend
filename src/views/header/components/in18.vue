@@ -1,8 +1,8 @@
 <template>
   <div class="in18">
-    <span  @click="switchLang('en')" style= "color: #f3921b;  align-items: center;">EN</span>
+    <span  @click="switchLang('en')" :class="{'is-curren': langCss =='en'}" style= "color: #f3921b;  align-items: center;">EN</span>
     <span>  /  </span>
-    <span @click="switchLang('zh')">中文</span>
+    <span @click="switchLang('zh')" :class="{'is-curren': langCss =='zh'}">中文</span>
   </div>
 </template>
 <script>
@@ -30,12 +30,15 @@ export default {
 
 <style lang="scss" scoped>
 .in18{
-  font-size: 30px;
+  font-size: 15px;
   color: var(--main-text-color);
   cursor: pointer;
   @media (max-width: 768px) {
     font-size: 20px;
     margin-left: 10px;
   }
+}
+.is-curren {
+  font-size: 30px;
 }
 </style>

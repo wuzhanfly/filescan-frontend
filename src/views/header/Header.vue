@@ -92,6 +92,7 @@ export default {
           key: this.key,
           filter: this.filter
         });
+
         this.loading = false;
         const { model_flag } = res;
         let target = "";

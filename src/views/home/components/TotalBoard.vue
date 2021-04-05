@@ -1,29 +1,41 @@
 <template>
   <div
-    class="total-board bottom-10"
+    class="bottom-10"
     v-loading="loading"
     element-loading-background="var(--board-bg-color)"
   >
-    <div v-for="item in info" :key="item.key" class="info-item">
-      <div>
-        {{ $t(`home.board.${item.labelKey}.label`) }}
-        <el-popover
-          placement="bottom-start"
-          width="200"
-          trigger="hover"
-          :content="$t(`home.board.${item.labelKey}.tips`)"
-          v-if="!isMobile"
-        >
-          <i
-            class="el-icon-warning-outline"
-            slot="reference"
-            style="margin-left:3px"
-          ></i>
-        </el-popover>
-      </div>
-      <div v-show="!loading">{{ `${item.value || ""} ${item.unit}` }}</div>
+    <div class="menu-btn">
+      <el-button v-if="showAll" @click="showMenu()">
+        close
+        <i class="el-icon-caret-top"></i>
+      </el-button>
+      <el-button v-else @click="showMenu()">
+        open
+        <i class="el-icon-caret-bottom"></i>
+      </el-button>
     </div>
-  </div>
+    <div class="total-board" :class="{'isAll': showAll}">
+      <div v-for="item in info" :key="item.key" class="info-item">
+        <div>
+          {{ $t(`home.board.${item.labelKey}.label`) }}
+          <el-popover
+            placement="bottom-start"
+            width="200"
+            trigger="hover"
+            :content="$t(`home.board.${item.labelKey}.tips`)"
+            v-if="!isMobile"
+          >
+            <i
+              class="el-icon-warning-outline"
+              slot="reference"
+              style="margin-left:3px"
+            ></i>
+          </el-popover>
+        </div>
+        <div v-show="!loading">{{ `${item.value || ""} ${item.unit}` }}</div>
+      </div>
+    </div>
+    </div>
 </template>
 <script>
 import { getBoardInfo } from "@/api/home";
@@ -74,10 +86,84 @@ export default {
           key: "peers",
           class: "yellow",
           unit: ""
-        }
+        },
+        {
+          labelKey: "PowerIn24H",
+          key: "PowerIn24H",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "avgBlocksTipSet",
+          key: "avgBlocksTipSet",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "avgGasPremium",
+          key: "avgGasPremium",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "avg_gas_price",
+          key: "avg_gas_price",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "avg_messages_tipset",
+          key: "avg_messages_tipset",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "currentFil",
+          key: "currentFil",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "flowRate",
+          key: "flowRate",
+          class: "blue",
+          unit: "FIL"
+        },
+
+        {
+          labelKey: "last_blocktime",
+          key: "last_blocktime",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "newlyFilIn24h",
+          key: "newlyFilIn24h",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "newlyPrice",
+          key: "newlyPrice",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "totalBurnUp",
+          key: "totalBurnUp",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "totalFil",
+          key: "totalFil",
+          class: "blue",
+          unit: "FIL"
+        },
       ],
       timer: null,
-      loading: false
+      loading: false,
+      showAll: false,
     };
   },
   async mounted() {
@@ -93,7 +179,7 @@ export default {
     async getBoardInfo() {
       try {
         const info = await getBoardInfo();
-        console.log(info.peers)
+        console.log(111,info.PowerIn24H)
         this.loading = false;
         info.avg_message_size = parseInt(info.avg_message_size);
         this.info = this.info.map(item => {
@@ -111,6 +197,9 @@ export default {
       } catch (e) {
         console.log(e);
       }
+    },
+    showMenu() {
+      this.showAll = !this.showAll;
     }
   },
   beforeDestroy() {
@@ -118,19 +207,38 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+.el-button {
+  color: var(--total-board-top-color)!important;
+  border: none!important;
+  background: transparent!important;
+  span {
+    font-size: 30px!important;
+  }
+}
+</style>
 <style lang="scss" scoped>
+.menu-btn {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
 .total-board {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  height: 200px;
+  //justify-content: space-between;
   .info-item {
-    //width: 16.66%;
+    width: 12.2%;
     border-radius: 8px;
     box-shadow: 0px 1px 7px 9px rgba(0, 0, 0, 0.03);
     padding: 15px;
-    flex: 1;
+    //flex: 1;
     margin-right: 10px;
+    margin-bottom: 10px;
     background: var(--board-bg-color);
-    &:nth-child(6) {
+    &:nth-child(7n) {
       margin-right: 0;
     }
     div {
@@ -158,8 +266,12 @@ export default {
     }
   }
 }
+.isAll {
+  height: auto;
+}
 @media (max-width: 768px) {
   .total-board {
+    height: 170px;
     .info-item {
       flex: 1;
       min-width: 45%;
@@ -182,6 +294,9 @@ export default {
         }
       }
     }
+  }
+  .isAll {
+    height: auto;
   }
 }
 </style>
