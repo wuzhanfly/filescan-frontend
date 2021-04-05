@@ -30,10 +30,10 @@ export default {
       showColor: '',
       value: 24,
       options: [
-        {label: '24 Hour', value: 24 },
-        {label: '7 Day', value: 7 },
-        {label: '30 Day', value: 30 },
-        {label: '180 Day', value: 180 },
+        {label: '24 Hour', value: 1 },
+        {label: '7 Day', value: 2 },
+        {label: '30 Day', value: 3 },
+        {label: '180 Day', value: 4 },
       ]
     };
   },
@@ -53,7 +53,9 @@ export default {
     },
     async getFee(val) {
       try {
-        let res = await getFee(val);
+        let res = await getFee({
+          GasIndex:val
+        });
         this.formatTime(res.timeList);
         this.baseFee = res.baseFee.feeList;
         this.gasFee32 = res.gasFee32.feeList;

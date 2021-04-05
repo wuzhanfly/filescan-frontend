@@ -62,18 +62,24 @@ export function getGetFil() {
   });
 }
 
-
-export function getPowerIn(){
+// param:{
+//   key number
+// }
+export function getPowerIn(data){
   return fetch({
     method: "post",
     url: "GetPowerIn",
+    data
   });
 }
-
-export function getFee() {
+// param:{
+//   key number
+// }
+export function getFee(data) {
   return fetch({
     method: "post",
     url: "GetFee",
+    data
   });
 }
 
