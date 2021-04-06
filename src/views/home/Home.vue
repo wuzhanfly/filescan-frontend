@@ -8,16 +8,16 @@
 <!--      v-if="!isMobile && atIndex"-->
 <!--    />-->
 <!--    </div >-->
-
+    <div class="board-con bottom-20">
+      <PledgeCollateral />
+    </div>
     <div class="board-con bottom-20">
       <total-board />
 
       <total-chart />
 
     </div>
-    <div class="board-con bottom-20">
-      <PledgeCollateral />
-    </div>
+
 <!--    <div class="board-con bottom-20">-->
 <!--      <proven-power />-->
 <!--    </div>-->
@@ -28,7 +28,6 @@
     <div class="block-message-table bottom-20">
       <block-table />
       <message-table />
-
     </div>
 
 

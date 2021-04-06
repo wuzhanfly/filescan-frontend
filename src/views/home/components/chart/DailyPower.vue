@@ -1,8 +1,8 @@
 <template>
   <div class="power-chart">
-    <el-radio-group class="btn-group" size="small" v-model="value">
-      <el-radio-button label="30" @click="powerIn"></el-radio-button>
-      <el-radio-button label="180" @click="powerIn"></el-radio-button>
+    <el-radio-group class="btn-group" size="small" v-model="value"  @change="powerIn()" >
+      <el-radio-button label="30" ></el-radio-button>
+      <el-radio-button label="180"></el-radio-button>
     </el-radio-group>
     <div class="chart-con" ref="power"></div>
   </div>
@@ -55,7 +55,7 @@ export default {
       }
     },
     powerIn() {
-      console.log(this.value)
+      console.log(11,this.value)
       this.getPowerIn(this.value)
     },
     drawPowerChart() {

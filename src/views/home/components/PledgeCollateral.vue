@@ -45,7 +45,7 @@
           style="width: 100% ;text-align: center">
         <el-table-column
             prop="total_1P"
-            label="封装扇区总成本">
+            label="封装扇区总成本" >
         </el-table-column>
         <el-table-column
             prop="payment_1P"
@@ -109,14 +109,16 @@ export default {
   float: right!important;
 }
 .el-tabs .el-tabs__item {
-  font-size: 30px!important;
+  font-size: 25px!important;
   color: var(--total-board-top-color)!important;
+
 }
 .el-tabs .is-active {
   color: #32C5FF!important;
 }
 .el-table, .el-table th, .el-table tr {
   background: transparent!important;
+  font: initial;
 }
 .el-table th, .el-table td, .el-table th.is-leaf {
   padding-top: 10px!important;
@@ -125,10 +127,10 @@ export default {
   border-bottom: 1px solid var(--board-bg-color)!important;
 }
 .is-dark th, .is-dark td, .is-dark th.is-leaf {
-  color: white!important;
+  color: #b4b4b4 !important;
 }
 .is-total {
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 tr {pointer-events: none;}
 .el-table  .el-table__body .delstatu:hover>td{
@@ -147,7 +149,7 @@ tr {pointer-events: none;}
     margin-bottom: 10px!important;
   }
   .el-tabs .el-tabs__item {
-    font-size: 14px!important;
+    font-size: 18px!important;
   }
   .el-tabs .el-tabs__nav, .el-tabs .el-table th > .cell, .el-tabs .el-table .cell {
     height: 20px!important;
@@ -156,7 +158,7 @@ tr {pointer-events: none;}
   }
 }
 </style>
-<style lang="scss" scoped>
+<style lang="scss" >
 .total-pl {
   display: block;
   background: var(--board-bg-color);
@@ -165,6 +167,5 @@ tr {pointer-events: none;}
   border-color: var(--board-bg-color) !important;
   box-shadow: 0px 1px 7px 9px rgba(0, 0, 0, 0.03);
 }
-
 
 </style>

@@ -28,7 +28,7 @@ export default {
       gasFee32Unit: '',
       gasFee64Unit: '',
       showColor: '',
-      value: 24,
+      value: 24 ,
       options: [
         {label: '24 Hour', value: 1 },
         {label: '7 Day', value: 2 },

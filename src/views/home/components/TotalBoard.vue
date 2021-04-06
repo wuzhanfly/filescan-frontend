@@ -6,11 +6,11 @@
   >
     <div class="menu-btn">
       <el-button v-if="showAll" @click="showMenu()">
-        close
+        收起
         <i class="el-icon-caret-top"></i>
       </el-button>
       <el-button v-else @click="showMenu()">
-        open
+        展开全部
         <i class="el-icon-caret-bottom"></i>
       </el-button>
     </div>
@@ -91,7 +91,7 @@ export default {
           labelKey: "PowerIn24H",
           key: "PowerIn24H",
           class: "blue",
-          unit: "FIL"
+          unit: "PiB"
         },
         {
           labelKey: "avgBlocksTipSet",
@@ -102,18 +102,6 @@ export default {
         {
           labelKey: "avgGasPremium",
           key: "avgGasPremium",
-          class: "blue",
-          unit: "FIL"
-        },
-        {
-          labelKey: "avg_gas_price",
-          key: "avg_gas_price",
-          class: "blue",
-          unit: "FIL"
-        },
-        {
-          labelKey: "avg_messages_tipset",
-          key: "avg_messages_tipset",
           class: "blue",
           unit: "FIL"
         },
@@ -179,7 +167,7 @@ export default {
     async getBoardInfo() {
       try {
         const info = await getBoardInfo();
-        console.log(111,info.PowerIn24H)
+        info.PowerIn24H = info.PowerIn24H.substring(0,6)
         this.loading = false;
         info.avg_message_size = parseInt(info.avg_message_size);
         this.info = this.info.map(item => {
