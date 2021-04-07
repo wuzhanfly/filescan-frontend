@@ -162,14 +162,30 @@ const en = {
       label: ["Message ID", "Time", "From", "To", "Value"]
     },
     board: {
-      height: {
-        label: "Tipset Height",
-        tips: "The Latest Tipset Height"
+      expand:{
+        label: "ExpandAll",
+      },
+      fold:{
+        label: "Fold",
+      },
+      blockRewardIn24h: {
+        label: "blockRewardIn24h",
+        tips: "Ratio of total Block Reward to Quality Adjusted Power in last 24h."
       },
       reward: {
         label: "Block Reward",
         tips: "The Latest Block Reward"
       },
+      height: {
+        label: "Tipset Height",
+        tips: "The Latest Tipset Height"
+      },
+      //TotalAccounts
+      totalAccounts: {
+        label: "TotalAccounts",
+        tips: "Number of actors on the whole network."
+      },
+
       blockTime: {
         label: "Last BlockTime",
         tips: "Time since a miner last created a block"
@@ -186,26 +202,26 @@ const en = {
         label: "Avg Message Size",
         tips: "Avg Message Size of Total Network"
       },
-      pledge: {
-        label: "Pledge Collateral",
-        tips: "Total Fil in Pledge Collateral"
+      pledgeCollateral: {
+        label: "Total Pledge Collateral",
+        tips: "FILs pledged by miners."
       },
       peers: {
         label: "Active Miners",
-        tips: "Amount of miners that has a positive storage power."
+        tips: "Number of miners whose current Quality Adjusted Power is greater than 0."
       },
       PowerIn24H: {
-        label: " PowerIn 24H",
-        tips: "Amount of miners that has a positive storage power."
+        label: " 24h Power Increased",
+        tips: "24h computing power growth across the network."
       },
 
       avgBlocksTipSet: {
-        label: "avgBlocksTipSet",
-        tips: "Amount of miners that has a positive storage power."
+        label: "Avg Blocks per TipSet",
+        tips: "Average blocks produced per tipSet in 24h."
       },
       avgGasPremium: {
-        label: "avgGasPremium",
-        tips: "Amount of miners that has a positive storage power."
+        label: "Avg Gas Premium",
+        tips: "Average Gas Premium per message in 24h."
       },
       avg_gas_price: {
         label: "avgGasPrice",
@@ -216,32 +232,32 @@ const en = {
         tips: "Amount of miners that has a positive storage power."
       },
       currentFil: {
-        label: "currentFil",
-        tips: "Amount of miners that has a positive storage power."
+        label: "FIL Circulating Supply", //FIL流通总量
+        tips: "FIL Circulating Supply." //当前自由流通的FIL总和
       },
       flowRate: {
-        label: "flowRate",
-        tips: "Amount of miners that has a positive storage power."
+        label: "FIL Circulating Rate", //流通率
+        tips: "Circulating rate = circulating supply / total supply."//流通率=FIL流通量/FIL总量
       },
-      last_blocktime: {
-        label: "lastBlockTime",
-        tips: "Amount of miners that has a positive storage power."
+      flowTotal: {
+        label: "FIL Market Cap",
+        tips: "Market cap = FIL price * total supply"
       },
       newlyFilIn24h: {
-        label: "newlyFilIn24h",
-        tips: "Amount of miners that has a positive storage power."
+        label: "24h FIL Production",
+        tips: "FIL mined in last 24h."
       },
       newlyPrice: {
-        label: "newlyPrice",
-        tips: "Amount of miners that has a positive storage power."
+        label: "FIL Price",
+        tips: "Current FIL price. Data source: gate.io."
       },
       totalBurnUp: {
-        label: "totalBurnUp",
-        tips: "Amount of miners that has a positive storage power."
+        label: "FIL Burnt ",
+        tips: "FIL Burnt"
       },
       totalFil: {
-        label: "totalFil",
-        tips: "Amount of miners that has a positive storage power."
+        label: "FIL Total Supply",
+        tips: "Fil total supply."
       },
 
       number: {

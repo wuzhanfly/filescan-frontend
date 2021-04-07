@@ -67,7 +67,8 @@ export default {
     return {
       activeName: "first",
       tableData: [],
-      isDark: localStorage.getItem('filscanTheme') === 'dark' ? true : false
+
+      isDark: localStorage.getItem("filscanTheme") === "dark" ? true : false
     };
   },
   async mounted() {

@@ -66,6 +66,10 @@ const zh = {
         label: "首页",
         index: "/"
       },
+      miner: {
+        label: "矿工名单",
+        index: "/miner"
+      },
       tipset: {
         label: "区块链",
         index: "tipset",
@@ -126,6 +130,7 @@ const zh = {
     ]
   },
   home: {
+
     blockTime: {
       label: "平均出块时间",
       min: "最小",
@@ -150,17 +155,25 @@ const zh = {
       label: ["消息ID", "时间", "发送地址", "接收地址", "数额"]
     },
     board: {
+      blockRewardIn24h: {
+        label: "24h平均挖矿收益",
+        tips: "最近24小时的总出块奖励与有效算力的比值"
+      },
       height: {
         label: "最新区块高度",
         tips: "当前网络最新区块高度"
       },
       reward: {
-        label: "每区块奖励",
+        label: "区块奖励",
         tips: "当前高度下的区块奖励，每个高度有多个区块，每个区块均可获得该奖励"
       },
-      blockTime: {
-        label: "Last BlockTime",
-        tips: "自矿工上次创建区块以来的时间"
+      avgGasPremium: {
+        label: "平均Gas单价",
+        tips: "最近24h平均每条消息的Gas单价."
+      },
+      totalAccounts: {
+        label: "总账户数",
+        tips: "全网账户数量"
       },
       avgMsgTipset: {
         label: "平均区块打包消息数量",
@@ -174,9 +187,49 @@ const zh = {
         label: "平均消息大小",
         tips: "整个网络的平均消息大小 "
       },
-      pledge: {
+      pledgeCollateral: {
         label: "FIL质押量",
-        tips: "当前矿工进行挖矿所质押的FIL总和"
+        tips: "FIL质押量"
+      },
+      PowerIn24H: {
+        label: " 24h新增算力",
+        tips: "整个网络24小时的有效存储增长。"
+      },
+      newlyFilIn24h: {
+        label: "24h产出量",
+        tips: "最近24h累计挖矿产出的FIL数量."
+      },
+      avgBlocksTipSet: {
+        label: "平均每高度区块数",
+        tips: "最近24h平均每个高度下的区块数量."
+      },
+      peers: {
+        label: "活跃矿工数",
+        tips: "当前有效算力大于0的矿工."
+      },
+      newlyPrice: {
+        label: "FIL价格",
+        tips: "FIL最新价格，数据来源gate.io."
+      },
+      currentFil: {
+        label: "FIL流通总量", //
+        tips: "当前自由流通的FIL总和." //
+      },
+      flowTotal: {
+        label: "流通市值",
+        tips: "流通市值=FIL单价xFIL总量"
+      },
+      totalFil: {
+        label: "FIL总量",
+        tips: "FIL总量."
+      },
+      totalBurnUp: {
+        label: "FIL销毁量 ",
+        tips: "FIL销毁量"
+      },
+      flowRate: {
+        label: "流通率", //
+        tips: "流通率=FIL流通量/FIL总量."//
       },
       number: {
         label: "Blocks In Tipset",

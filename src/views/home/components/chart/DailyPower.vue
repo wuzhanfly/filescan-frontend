@@ -18,7 +18,8 @@ export default {
       myChart: null,
       powerArr: [],
       timeArr: [],
-      value: 30
+      value: 30,
+      title: ""
     };
   },
   computed:{

@@ -6,11 +6,12 @@
   >
     <div class="menu-btn">
       <el-button v-if="showAll" @click="showMenu()">
-        收起
+        Fold
+
         <i class="el-icon-caret-top"></i>
       </el-button>
       <el-button v-else @click="showMenu()">
-        展开全部
+        Expand All
         <i class="el-icon-caret-bottom"></i>
       </el-button>
     </div>
@@ -44,12 +45,21 @@ export default {
   name: "TotalBoard",
   data() {
     return {
-      info: [
+      other:[
         {
-          labelKey: "height",
-          key: "tipset_height",
+          labelKey: "expand",
+        },
+        {
+          labelKey: "Fold",
+        },
+      ],
+      info: [
+
+        {
+          labelKey: "blockRewardIn24h",
+          key: "blockRewardIn24h",
           class: "blue",
-          unit: ""
+          unit: "FIL/TiB"
         },
         {
           labelKey: "reward",
@@ -57,6 +67,68 @@ export default {
           class: "blue",
           unit: "FIL"
         },
+        {
+          labelKey: "newlyPrice",
+          key: "newlyPrice",
+          class: "blue",
+          unit: " $"
+        },
+        {
+          labelKey: "height",
+          key: "tipset_height",
+          class: "blue",
+          unit: ""
+        },
+        {
+          labelKey: "peers",
+          key: "peers",
+          class: "yellow",
+          unit: ""
+        },
+        {
+          labelKey: "totalFil",
+          key: "totalFil",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "currentFil",
+          key: "currentFil",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "pledgeCollateral",
+          key: "pledge_collateral",
+          class: "yellow",
+          unit: "FIL"
+        },
+
+        {
+          labelKey: "totalBurnUp",
+          key: "totalBurnUp",
+          class: "blue",
+          unit: "FIL"
+        },
+        {
+          labelKey: "flowRate",
+          key: "flowRate",
+          class: "blue",
+          unit: ""
+        },
+        {
+          labelKey: "flowTotal",
+          key: "flowTotal",
+          class: "blue",
+          unit: " billion $"
+        },
+        {
+          labelKey: "totalAccounts",
+          key: "totalAccounts",
+          class: "blue",
+          unit: ""
+        },
+
         {
           labelKey: "avgMsgTipset",
           key: "avg_messages_tipset",
@@ -75,18 +147,8 @@ export default {
           class: "yellow",
           unit: "bytes"
         },
-        {
-          labelKey: "pledge",
-          key: "pledge_collateral",
-          class: "yellow",
-          unit: "FIL"
-        },
-        {
-          labelKey: "peers",
-          key: "peers",
-          class: "yellow",
-          unit: ""
-        },
+
+
         {
           labelKey: "PowerIn24H",
           key: "PowerIn24H",
@@ -102,52 +164,18 @@ export default {
         {
           labelKey: "avgGasPremium",
           key: "avgGasPremium",
-          class: "blue",
-          unit: "FIL"
-        },
-        {
-          labelKey: "currentFil",
-          key: "currentFil",
-          class: "blue",
-          unit: "FIL"
-        },
-        {
-          labelKey: "flowRate",
-          key: "flowRate",
-          class: "blue",
-          unit: "FIL"
+          class: "yellow",
+          unit: ""
         },
 
-        {
-          labelKey: "last_blocktime",
-          key: "last_blocktime",
-          class: "blue",
-          unit: "FIL"
-        },
         {
           labelKey: "newlyFilIn24h",
           key: "newlyFilIn24h",
           class: "blue",
           unit: "FIL"
         },
-        {
-          labelKey: "newlyPrice",
-          key: "newlyPrice",
-          class: "blue",
-          unit: "FIL"
-        },
-        {
-          labelKey: "totalBurnUp",
-          key: "totalBurnUp",
-          class: "blue",
-          unit: "FIL"
-        },
-        {
-          labelKey: "totalFil",
-          key: "totalFil",
-          class: "blue",
-          unit: "FIL"
-        },
+
+
       ],
       timer: null,
       loading: false,
@@ -168,6 +196,7 @@ export default {
       try {
         const info = await getBoardInfo();
         info.PowerIn24H = info.PowerIn24H.substring(0,6)
+        info.flowTotal = info.flowTotal.substring(1,5)
         this.loading = false;
         info.avg_message_size = parseInt(info.avg_message_size);
         this.info = this.info.map(item => {

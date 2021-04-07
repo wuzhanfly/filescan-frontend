@@ -1,36 +1,31 @@
 <template>
   <div class="home-con bottom-10">
-
 <!--    <div class="bottom-20">-->
-<!--          <ticket-chain-->
-<!--      @hash-change="handleHashChange"-->
-<!--      @height-change="handleHeightChange"-->
-<!--      v-if="!isMobile && atIndex"-->
-<!--    />-->
-<!--    </div >-->
+<!--      <ticket-chain-->
+<!--        @hash-change="handleHashChange"-->
+<!--        @height-change="handleHeightChange"-->
+<!--        v-if="!isMobile && atIndex"-->
+<!--      />-->
+<!--    </div>-->
     <div class="board-con bottom-20">
       <PledgeCollateral />
     </div>
     <div class="board-con bottom-20">
       <total-board />
-
-      <total-chart />
-
+<!--      <total-chart />-->
     </div>
-
-<!--    <div class="board-con bottom-20">-->
-<!--      <proven-power />-->
-<!--    </div>-->
     <div class="block-chart bottom-20">
       <daily-power />
       <base-gas />
+    </div>
+    <div class="board-con bottom-20">
+<!--      <total-board />-->
+      <total-chart />
     </div>
     <div class="block-message-table bottom-20">
       <block-table />
       <message-table />
     </div>
-
-
   </div>
 </template>
 
@@ -39,10 +34,9 @@ import * as components from "./components";
 // import TicketChain from "../tipset/components/TicketChain";
 
 import TotalBoard from "@/views/home/components/TotalBoard";
-import PledgeCollateral from "@/views/home/components/PledgeCollateral"
-// import ProvenPower from "@/vies/stats/components/mining/ProvenPower"
-import DailyPower from "@/views/home/components/chart/DailyPower"
-import BaseGas from "@/views/home/components/chart/BaseGas"
+import PledgeCollateral from "@/views/home/components/PledgeCollateral";
+import DailyPower from "@/views/home/components/chart/DailyPower";
+import BaseGas from "@/views/home/components/chart/BaseGas";
 export default {
   name: "Home",
   data() {
@@ -54,7 +48,6 @@ export default {
     TotalBoard,
     ...components,
     // TicketChain,
-    // ProvenPower,
     PledgeCollateral,
     DailyPower,
     BaseGas
@@ -145,8 +138,8 @@ export default {
     background: transparent !important;
   }
   .block-chart {
-    display: inline!important;
-    height: 710px!important;
+    display: inline !important;
+    height: 710px !important;
   }
 }
 </style>
