@@ -7,15 +7,17 @@
           style="width: 100% ;text-align: center">
         <el-table-column
             prop="total_32"
-            label="Total Cost of Sealing Sector">
+            :label="$t(`home.topnav.total`)">
         </el-table-column>
+        <!-- Sealing Sector Pledge Fees -->
         <el-table-column
             prop="payment_32"
-            label="Sealing Sector Pledge Fees">
+            :label="$t(`home.topnav.payment`)">
         </el-table-column>
+        <!-- Sealing Sector Gas Fees -->
         <el-table-column
             prop="preGas_32"
-            label="Sealing Sector Gas Fees">
+            :label="$t(`home.topnav.preGas`)">
         </el-table-column>
       </el-table>
     </el-tab-pane>

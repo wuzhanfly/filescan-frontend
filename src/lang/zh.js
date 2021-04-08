@@ -29,10 +29,10 @@ const zh = {
       label: ["区块高度:", "Cid", "时间", "消息", "区块", "矿工", "奖励"],
       total: "共计发现 <i>{total}</i> 区块，总计 (<i>{fil}</i>)",
       height: "区块高度 : {height} "
+
     },
     gas: "Gas费趋势",
-    powerD:'算力增长趋势11',
-
+    powerD:'算力增长趋势',
   },
   header: {
     title: "Filscan",
@@ -116,7 +116,9 @@ const zh = {
     }
   },
   footer: {
+    Contact:"联系方式",
     peer: " 活跃矿工数: {count}",
+    desc: '漂亮浏览器是Filecoin区块链浏览器及数据服务平台。为用户提供有关Filecoin相关的各类数据、信息咨询和可视化图表等一站式的数据服务。',
     nav: [
       {
         label: "首页",
@@ -133,7 +135,15 @@ const zh = {
     ]
   },
   home: {
-
+    topnav: {
+      total: '封装扇区总成本',
+      payment: '封装扇区质押费',
+      preGas: '封装扇区Gas费'
+    },
+    expand: {
+      expand: '展开全部',
+      fold: '收起'
+    },
     blockTime: {
       label: "平均出块时间",
       min: "最小",
@@ -180,6 +190,10 @@ const zh = {
       },
       avgMsgTipset: {
         label: "平均区块打包消息数量",
+        tips: "每个区块的平均消息数"
+      },
+      newlyPricermb: {
+        label: "新家",
         tips: "每个区块的平均消息数"
       },
       avgGas: {

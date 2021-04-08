@@ -123,7 +123,9 @@ const en = {
     }
   },
   footer: {
+    Contact:'Contact',
     peer: "Active Peers {count}",
+    desc: 'Pl is a Filecoin blockchain explorer and data service platform, providing one-stop data services based on Filecoin, including various mining rankings, blockchain data queries, and visualization charts.',
     nav: [
       {
         label: "Home",
@@ -140,6 +142,15 @@ const en = {
     ]
   },
   home: {
+    topnav: {
+      total: 'Total Cost of Sealing Sector',
+      payment: 'Sealing Sector Pledge Fees',
+      preGas: 'Sealing Sector Gas Fees'
+    },
+    expand: {
+      expand: 'Expand All',
+      fold: 'Fold'
+    },
     blockTime: {
       label: "Avg Blocktime",
       min: "Min",

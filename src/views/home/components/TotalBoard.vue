@@ -6,11 +6,12 @@
   >
     <div class="menu-btn">
       <el-button v-if="showAll" @click="showMenu()">
-        Fold
+        
+        {{$t(`home.expand.fold`)}}
         <i class="el-icon-caret-top"></i>
       </el-button>
       <el-button v-else @click="showMenu()">
-        Expand All
+        {{$t(`home.expand.expand`)}}
         <i class="el-icon-caret-bottom"></i>
       </el-button>
     </div>
@@ -32,7 +33,7 @@
             ></i>
           </el-popover>
         </div>
-        <div v-show="!loading">{{ `${item.value || ""} ${item.unit}` }}</div>
+        <div v-show="!loading"><span :class="item.showRed ? 'cred' : ''">{{ `${item.value || ""} ${item.unit}` }}</span></div>
       </div>
     </div>
     </div>
@@ -58,7 +59,8 @@ export default {
           labelKey: "blockRewardIn24h",
           key: "blockRewardIn24h",
           class: "blue",
-          unit: "FIL/TiB"
+          unit: "FIL/TiB",
+          showRed: true
         },
         {
           labelKey: "reward",
@@ -70,8 +72,16 @@ export default {
           labelKey: "newlyPrice",
           key: "newlyPrice",
           class: "blue",
-          unit: " $"
+          unit: " $",
+          showRed: true
         },
+        //   {
+        //   labelKey: "newlyPricermb", //对应中英文的字段
+        //   key: "newlyPrice",//对应
+        //   class: "blue",
+        //   unit: " $",
+        //   showRed: true
+        // },
         {
           labelKey: "height",
           key: "tipset_height",
@@ -234,6 +244,9 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
+.cred{
+  color: var(--total-power-color);
+}
 .menu-btn {
   margin-bottom: 10px;
   display: flex;

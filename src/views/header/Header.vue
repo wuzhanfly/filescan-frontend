@@ -9,7 +9,7 @@
           <el-menu-item index="/">{{
             $t("header.nav.home.label")
           }}</el-menu-item>
-          <el-menu-item index="miner">{{
+          <el-menu-item :class="$route.path == '/miner' ? 'is-active': ''" index="/miner">{{
               $t("header.nav.miner.label") }}
           </el-menu-item>
           <el-submenu index="tipset">
