@@ -31,7 +31,7 @@ const zh = {
       height: "区块高度 : {height} "
     },
     gas: "Gas费趋势",
-    powerD:'算力增长趋势',
+    powerD:'算力增长趋势11',
 
   },
   header: {
