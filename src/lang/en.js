@@ -37,7 +37,9 @@ const en = {
       ],
       total: "Total of <i>{total}</i> Blocks(<i>{fil}</i>FIL)",
       height: "Tipset Height # {height}"
-    }
+    },
+    gas: "Gas cost trends",
+    powerD:"Power Growth Trend" ,
   },
   header: {
     title: "Filscan",

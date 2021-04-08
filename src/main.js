@@ -18,7 +18,8 @@ Vue.prototype.$chart = echarts;
 //   i18n: (key, value) => i18n.t(key, value)
 // })
 
-
+Vue.prototype.$i18nObj = i18n
+Vue.prototype.$lang = i18n.messages[i18n.locale]
 Vue.mixin(mixin);
 new Vue({
   router,

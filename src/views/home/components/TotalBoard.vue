@@ -7,7 +7,6 @@
     <div class="menu-btn">
       <el-button v-if="showAll" @click="showMenu()">
         Fold
-
         <i class="el-icon-caret-top"></i>
       </el-button>
       <el-button v-else @click="showMenu()">

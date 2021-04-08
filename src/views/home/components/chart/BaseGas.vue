@@ -75,7 +75,7 @@ export default {
       var option;
       option = {
         title: {
-          text: 'Gas费用',
+          text: this.$lang.component.gas ,
           textStyle: {
            color: this.theme === 'dark' ? "#fff" : '#0B4977',
           },
@@ -180,6 +180,12 @@ export default {
   },
   watch: {
     theme() {
+
+      this.drawGasChart()
+    },
+    // eslint-disable-next-line no-unused-vars
+    '$i18n.locale'(newValue) {
+      this.$lang = this.$i18nObj.messages[localStorage.getItem('lang')]
       this.drawGasChart()
     }
   }

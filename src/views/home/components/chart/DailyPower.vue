@@ -63,7 +63,7 @@ export default {
       var option;
       option = {
         title: {
-          text: '全网算力增长',
+          text:this.$lang.component.powerD ,
           textStyle: {
             color: this.theme === 'dark' ? "#fff" : '#0B4977',
           },
@@ -124,6 +124,11 @@ export default {
   },
   watch: {
     theme() {
+      this.drawPowerChart()
+    },
+    // eslint-disable-next-line no-unused-vars
+    '$i18n.locale'(newValue) {
+      this.$lang = this.$i18nObj.messages[localStorage.getItem('lang')]
       this.drawPowerChart()
     }
   }

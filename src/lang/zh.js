@@ -29,7 +29,10 @@ const zh = {
       label: ["区块高度:", "Cid", "时间", "消息", "区块", "矿工", "奖励"],
       total: "共计发现 <i>{total}</i> 区块，总计 (<i>{fil}</i>)",
       height: "区块高度 : {height} "
-    }
+    },
+    gas: "Gas费趋势",
+    powerD:'算力增长趋势',
+
   },
   header: {
     title: "Filscan",

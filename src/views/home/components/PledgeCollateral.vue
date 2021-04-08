@@ -7,15 +7,15 @@
           style="width: 100% ;text-align: center">
         <el-table-column
             prop="total_32"
-            label="封装扇区总成本">
+            label="Total Cost of Sealing Sector">
         </el-table-column>
         <el-table-column
             prop="payment_32"
-            label="封装扇区质押费">
+            label="Sealing Sector Pledge Fees">
         </el-table-column>
         <el-table-column
             prop="preGas_32"
-            label="封装扇区Gas费">
+            label="Sealing Sector Gas Fees">
         </el-table-column>
       </el-table>
     </el-tab-pane>
@@ -26,15 +26,15 @@
           style="width: 100% ;text-align: center">
         <el-table-column
             prop="total_1T"
-            label="封装扇区总成本">
+            label="Total Cost of Sealing Sector">
         </el-table-column>
         <el-table-column
             prop="payment_1T"
-            label="封装扇区质押费">
+            label="Sealing Sector Pledge Fees">
         </el-table-column>
         <el-table-column
             prop="preGas_1T"
-            label="封装扇区Gas费">
+            label="Sealing Sector Gas Fees">
         </el-table-column>
       </el-table>
     </el-tab-pane>
@@ -45,15 +45,15 @@
           style="width: 100% ;text-align: center">
         <el-table-column
             prop="total_1P"
-            label="封装扇区总成本" >
+            label="Total Cost of Sealing Sector">
         </el-table-column>
         <el-table-column
             prop="payment_1P"
-            label="封装扇区质押费">
+            label="Sealing Sector Pledge Fees">
         </el-table-column>
         <el-table-column
             prop="preGas_1P"
-            label="封装扇区Gas费">
+            label="Sealing Sector Gas Fees">
         </el-table-column>
       </el-table>
     </el-tab-pane>
